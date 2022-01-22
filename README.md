@@ -25,9 +25,10 @@ This container runs the guacamole web client, the guacd server and a postgres da
 
 ```shell
 docker run -d \
+  --name guacamole
   -p 8080:8080 \
   -v </path/to/config>:/config \
-  jmandoo/guacamole
+  jmandoo/guacamole:latest
 ```
 
 ## Parameters
@@ -46,10 +47,11 @@ For example:
 
 ```shell
 docker run -d \
+  --name guacamole
   -p 8080:8080 \
   -v </path/to/config>:/config \
   -e "EXTENSIONS=auth-ldap,auth-duo"
-  jmandoo/guacamole
+  jmandoo/guacamole:latest
 ```
 
 Currently the available extensions are:
@@ -76,7 +78,7 @@ Mapped volumes behave differently when running Docker for Windows and you may en
 version: "2"
 services:
   guacamole:
-    image: jmandoo/guacamole
+    image: jmandoo/guacamole:latest
     container_name: guacamole
     volumes:
       - postgres:/config

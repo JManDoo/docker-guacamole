@@ -1,4 +1,6 @@
-**:warning: This project is now archived and no longer supported. Please contact me if you maintain a replacement and would like me to link to your repo.**
+build from source
+git clone https://github.com/JManDoo/docker-guacamole.git
+docker build -t jmandoo/guacamole .
 
 # Docker Guacamole
 
@@ -76,7 +78,7 @@ Mapped volumes behave differently when running Docker for Windows and you may en
 version: "2"
 services:
   guacamole:
-    image: oznu/guacamole
+    image: jmandoo/guacamole
     container_name: guacamole
     volumes:
       - postgres:/config

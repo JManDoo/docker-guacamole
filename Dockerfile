@@ -1,9 +1,9 @@
 FROM library/tomcat:9-jre11
 
 ENV ARCH=amd64 \
-  GUAC_VER=1.3.0 \
+  GUAC_VER=1.4.0 \
   GUACAMOLE_HOME=/app/guacamole \
-  PG_MAJOR=9.6 \
+  PG_MAJOR=13 \
   PGDATA=/config/postgres \
   POSTGRES_USER=guacamole \
   POSTGRES_DB=guacamole_db
@@ -27,7 +27,7 @@ RUN apt-get update && apt-get install -y \
     libswscale-dev freerdp2-dev libfreerdp-client2-2 libpango1.0-dev \
     libssh2-1-dev libtelnet-dev libvncserver-dev \
     libpulse-dev libssl-dev libvorbis-dev libwebp-dev libwebsockets-dev \
-    ghostscript postgresql-${PG_MAJOR} \
+    build-essential make ghostscript postgresql-${PG_MAJOR} \
   && rm -rf /var/lib/apt/lists/*
 
 # Link FreeRDP to where guac expects it to be

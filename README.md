@@ -1,7 +1,16 @@
-build from source
+# build from source
+
+```
 git clone https://github.com/JManDoo/docker-guacamole.git
 docker build -t jmandoo/guacamole .
+```
 
+# Deploy with Docker-Compose
+
+Change directory into the root of the build directory where the docker-compose.yaml is located, edit the compose file to your liking and save it.
+```
+sudo docker-compose up -d
+```
 # Docker Guacamole
 
 A Docker Container for [Apache Guacamole](https://guacamole.apache.org/), a client-less remote desktop gateway. It supports standard protocols like VNC, RDP, and SSH over HTML5.

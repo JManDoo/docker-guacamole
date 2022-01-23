@@ -13,7 +13,7 @@ sudo docker-compose up -d
 ```
 # Docker Guacamole
 
-A Docker Container for [Apache Guacamole](https://guacamole.apache.org/), a client-less remote desktop gateway. It supports standard protocols like VNC, RDP, and SSH over HTML5.
+TEST A Docker Container for [Apache Guacamole](https://guacamole.apache.org/), a client-less remote desktop gateway. It supports standard protocols like VNC, RDP, and SSH over HTML5.
 
 This image will run on most platforms that support Docker including Docker for Mac, Docker for Windows, Synology DSM.
 
